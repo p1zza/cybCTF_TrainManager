@@ -151,4 +151,4 @@ def getValue(s):
     return tagMatch.group(1)
 
 if __name__ == '__main__':
-    app.run(debug=False, port = 8003)
+    app.run(debug=False, port = 8003, host='0.0.0.0')
