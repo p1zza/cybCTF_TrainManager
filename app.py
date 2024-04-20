@@ -1,9 +1,5 @@
-from posixpath import dirname
-from flask import Flask, redirect, render_template, request, request_started, url_for, flash, session
-from datetime import datetime
-from os import path
+from flask import Flask, redirect, render_template, request, url_for, flash, session
 import models
-import time
 import array
 import xml.etree.ElementTree as ET
 import uuid
@@ -153,7 +149,6 @@ def getTagID(s):
 def getValue(s):
     tagMatch = re.search(r'\<.*?\>(.*?)\<\/.*?\>',s)
     return tagMatch.group(1)
-     
 
 if __name__ == '__main__':
-    app.run(debug=True, port = 6996)
+    app.run(debug=False, port = 8003)
